@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const FilmsDetails = () => {
-  const { filmid } = useParams([]);
+  const { filmsid } = useParams([]);
   const [films, setfilms] = useState([]);
 
   useEffect(() => {
@@ -13,15 +13,18 @@ const FilmsDetails = () => {
 
   return (
     <>
-
-    <main className="morecontainer">
-      <section className="row justify-content-center">
-        <div className="card col-md-6">
-          <h1 className="text-primary">Hello {filmid} </h1>
-          <p className="card-subtitle">{films.description}</p>
-          </div>
-      </section>
-    </main>
+      <main className="morecontainer">
+        <section className="row justify-content-center">
+          {films.map((films) => (
+            <div className="col-md-6" key={`films-card-${films.id}`}>
+              <div className="card col-md-6">
+                <h1 className="text-primary">Hello {filmsid}</h1>
+                <p className="card-subtitle">{films.description}</p>
+              </div>
+            </div>
+          ))}
+        </section>
+      </main>
       {/* <div class="container">
         <section className="row justify-content-center mt-5">
           {films.map((films) => (
