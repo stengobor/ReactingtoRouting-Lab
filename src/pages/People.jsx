@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 const People = () => {
@@ -21,12 +22,12 @@ const People = () => {
                 <div className="card">
                   <div className="card-body">
                     <h5 className="card-title">{people.name}</h5>
-                    <a
-                      href="https://ghibliapi.herokuapp.com/people"
-                      className="card-link"
+                    <Link
+                      to={`/People/${people.id}`}
+                      id="moreinfo"
                     >
                       Read More...
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

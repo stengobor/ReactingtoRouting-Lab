@@ -10,6 +10,7 @@ const Films = () => {
       .then((allFilms) => setFilms(allFilms));
   }, []);
 
+
   return (
     <>
 

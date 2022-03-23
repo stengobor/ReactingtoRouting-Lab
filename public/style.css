@@ -2,10 +2,23 @@ body {
   background-color: lightgreen;
 }
 
+a {
+  text-decoration: none;
+}
+
 #logo {
   margin: 0 auto;
   width: 300px;
   height: 125px;
+}
+
+.topnav {
+  background-color: rgba(250, 216, 142, 0.452);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px;
 }
 
 #bio {
@@ -19,9 +32,6 @@ body {
   height: 350px;
 }
 
-a {
-  text-decoration: none;
-}
 
 #navlink {
   float: right;
@@ -35,14 +45,6 @@ a {
   margin: auto;
 }
 
-.topnav {
-  background-color: rgba(250, 216, 142, 0.452);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 2px;
-}
 
 #navlink:hover {
   background-color: #ddd;
